@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="container-idiomas">
+        <div class="botones-idiomas espaniol" (click)="seleccionarEspaniol()"></div>
+        <div class="botones-idiomas portugues" (click)="seleccionarPortugues()"></div>
+        <div class="botones-idiomas ingles" (click)="seleccionarIngles()"></div>
+    </div>
+    <div class="container-categorias">
+        <div class="botones-categorias numeros" (click)="seleccionarNumeros()"></div>
+        <div class="botones-categorias animales" (click)="seleccionarAnimales()"></div>
+        <div class="botones-categorias colores" (click)="seleccionarColores()"></div>
+    </div>
+    <div class="container-objetos">
+        <div class="botones-objetos btnUno" (click)="reproducirAudio('uno')"></div>
+        <div class="botones-objetos btnDos" (click)="reproducirAudio('dos')"></div>
+        <div class="botones-objetos btnTres" (click)="reproducirAudio('tres')"></div>
+        <div class="botones-objetos btnCuatro" (click)="reproducirAudio('cuatro')"></div>
+        <div class="botones-objetos btnCinco" (click)="reproducirAudio('cinco')"></div>
+    </div>
+
+    <div class="cambiar-idioma">
+        <button class="drop-idioma" (click)="dropear('lenguajeNum')"><img class="idioma-activo" src="../../assets/img/{{idiomaSeleccionado}}.png"><ion-icon class="flechi" name="caret-down-outline"></ion-icon></button>
+      <ul class="lengu" id="lenguajeNum">
+        <li><img  (click)="selectEspaniol()" src="../../assets/img/espaniol.png"></li>
+        <li><img (click)="selectPortugues()" src="../../assets/img/portugues.png"></li>
+        <li><img (click)="selectIngles()" src="../../assets/img/ingles.png"></li>
+      </ul>
+    </div>
+
+    <div class="cambiar-categoria">
+        <button class="drop-categoria" (click)="dropear('categoriaNum')"><img class="categoria-activa" src="../../assets/img/icon-{{categoriaSeleccionada}}.png"><ion-icon class="flechi" name="caret-down-outline"></ion-icon></button>
+      <ul class="categoria" id="categoriaNum">
+        <li><img  (click)="selectNumeros()" src="../../assets/img/icon-numeros.png"></li>
+        <li><img (click)="selectAnimales()" src="../../assets/img/icon-animales.png"></li>
+        <li><img (click)="selectColores()" src="../../assets/img/icon-colores.png"></li>
+      </ul>
+    </div>
+
+    
+    <div class="cambiar-categoria"></div>
+    <ion-icon name="arrow-forward-outline" class="siguiente-uno" size="large"  (click)="siguienteUno()"></ion-icon>
+    <ion-icon name="arrow-forward-outline" class="siguiente-dos" size="large" (click)="siguienteDos()"></ion-icon>
+    <ion-icon name="arrow-back-outline" class="regresar-uno" size="large" (click)="regresarUno()"></ion-icon>
+    <ion-icon name="arrow-back-outline" class="regresar-dos" size="large" (click)="regresarDos()"></ion-icon>
+</div>

@@ -1,27 +1,128 @@
-#container {
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+//fondo
+.container
+{
+  width: 100vw;
+  height: 100vh;
+  background: url(../../assets/img/fondo.jpg);
+  background-size: cover;
+  transition: all 1s ease;
+}
+
+//titulo
+.container-titulo
+{
+  height: 7%;
+  width: 70%;
   text-align: center;
-
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  left: 15%;
+  top: 7.5%;
+}
+.titulo {
+  font-size: 24px;
+  font-family: Sketch;
+  font-weight: 900;
+  color: rgb(0, 0, 0);
+  
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+//form
+
+.container-form {
+  position: absolute;
+  top: 35%;
+  left: 15%;
+  width: 70%;
+  height: 60%;
+
+  .form {
+    width: 100%;
+    height: 40%;
+    background: url(../../assets/img/fondo-rojo.jpg);
+    background-size: cover;
+    border-radius: 20px;
+    border: #2f1f13 6px solid;
+    overflow: hidden;
+    box-sizing: border-box;
+    opacity: 0.9;
+    box-shadow: 1px 13px 24px 9px rgba(0,0,0,0.75);
+  }  
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
+ion-icon {
+  color: white;
+  margin-bottom: 5%;
+  transition: ease 0.2s;
 
-  color: #8c8c8c;
-
-  margin: 0;
+  &:active {
+    color: black;
+  }
 }
 
-#container a {
-  text-decoration: none;
+.users {
+  position: absolute;
+  left: 85%;
+  top: 5%;
+}
+
+.input {
+  background-color: #c0682d8e;
+  width: 85%;
+  height: 20%;
+  border-radius: 25px;
+  border: #2f1f13 2px solid;
+  position: relative;
+  top: 20%;
+  left: 7.5%;
+  --placeholder-color: black;
+  --placeholder-opacity: 0.8;
+  
+  
+
+  &.pass-input {
+    top: 40%;
+  }
+}
+
+.btn-login {
+  width: 100% !important;
+  --ion-color-base: #79482d !important;
+  border: #2f1f13 4px solid;
+  border-radius: 10px;
+
+}
+
+.container-btn {
+  width: 100%;
+  position: absolute;
+  top: 80%;
+}
+
+
+.lista-usuarios {
+  //display: none;
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  width: 80%;
+  border-radius: 5px;
+}
+
+.loading{
+  opacity: 0.5;
+  z-index: 8000;
+}
+
+.spinner {
+  --color: rgb(0, 0, 0);
+  z-index:9000;
+  position: absolute;
+  top: 46%;
+  left: 46%;
+  display: none;
 }

@@ -1,3 +1,15 @@
 <ion-app>
+  <div class="container" [style.display]="splash ? 'flex' : 'none'">
+    <div class="container-titulo">
+      <h5 class="titulo">MAXIMILIANO VARGAS</h5>
+      <h5 class="titulo">4to A</h5>
+
+    </div>
+    <div class="container-splash">
+      <img src="../assets/img/cow.gif" class="splash">
+      
+    </div>
+    <div class="cargando">Cargando</div>
+  </div>
   <ion-router-outlet></ion-router-outlet>
 </ion-app>
